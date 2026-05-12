@@ -107,5 +107,23 @@
         "descricao": "Templários cruzados, xamãs proféticos, ou fanáticos com olhos enlouquecidos que empunham o poder de seus deuses para expurgar os impuros."
       }
     ]
+  },
+  "lendas": {
+    "titulo": "Lendas e Lugares",
+    "texto": "Rumores cantados em tavernas sujas e sussurros compartilhados perto da fogueira moribunda. A maioria é mentira. As piores são verdades.",
+    "lista": [
+      {
+        "nome": "A Cidadela Perdida",
+        "descricao": "O último grande reduto da Era Primordial, soterrado após o fim do mundo antigo. Dizem que suas portas de mithral escondem tesouros divinos, mas as ruínas são patrulhadas por abominações inomináveis que nunca dormem."
+      },
+      {
+        "nome": "O Labirinto Escarlate",
+        "descricao": "Um complexo de túneis e galerias escavados na carne da terra, de onde emana um brilho vermelho perpétuo. Ninguém sabe o que pulsa em seu centro, mas quem retorna de lá carrega a loucura nos olhos."
+      },
+      {
+        "nome": "As Profundezas",
+        "descricao": "O nível mais abissal do Shadowdark. Lendas sussurram que lá embaixo não há mais pedra ou terra, apenas um breu líquido onde seres antigos aguardam o momento de devorar o sol."
+      }
+    ]
   }
 }

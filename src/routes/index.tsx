@@ -3,7 +3,8 @@ import heroImg from "@/assets/hero-torch.jpg";
 import { Container } from "@/components/Container";
 import { LoreCard } from "@/components/LoreCard";
 import { Embers } from "@/components/Embers";
-import { Flame, Skull, Map, BookOpen, ScrollText, Mountain } from "lucide-react";
+import { Flame, Skull, BookOpen, ScrollText } from "lucide-react";
+import lore from "@/data/lore.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -54,8 +55,8 @@ function Home() {
             <span>✦</span>
           </div>
           <p className="text-base md:text-lg text-bone/80 italic max-w-2xl mx-auto leading-relaxed animate-fade-up delay-500">
-            Uma introdução visual e sem spoilers ao clima, aos lugares e às lendas de ShadowDark
-            RPG, feita para quem vai entrar na escuridão pela primeira vez.
+            {lore.introducao.texto.split(". ")[0]}. Uma introdução imersiva ao mundo, povos e
+            entidades de Shadowdark RPG.
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-4 animate-fade-up delay-700">
             <Link
@@ -64,12 +65,12 @@ function Home() {
             >
               Começar a leitura
             </Link>
-            <Link
-              to="/universo"
+            <a
+              href="#o-que-e"
               className="font-display uppercase tracking-[0.25em] text-xs sm:text-sm border border-flame/60 text-flame px-8 py-4 hover:bg-flame/10 hover:border-flame transition-all duration-500"
             >
               O que é o ShadowDark?
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -82,11 +83,25 @@ function Home() {
       {/* INTRO PULL-QUOTE */}
       <section className="relative py-24">
         <Container className="py-0">
-          <p className="pullquote max-w-3xl mx-auto animate-reveal">
-            “Há lugares onde a chama recusa-se a brilhar.
+          <p className="pullquote max-w-3xl mx-auto animate-reveal text-2xl">
+            “Nestes corredores obscuros, a ruína e a glória
             <br />
-            Não por estarem úmidos. Por estarem ouvindo.”
+            florescem eternamente.”
           </p>
+        </Container>
+      </section>
+
+      {/* O QUE É SHADOWDARK? */}
+      <section id="o-que-e" className="relative pb-24 scroll-mt-24">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-display text-3xl md:text-4xl text-ivory text-glow-soft mb-8">
+              {lore.oQueE.titulo}
+            </h2>
+            <p className="text-muted-foreground italic text-lg leading-relaxed font-serif">
+              {lore.oQueE.texto}
+            </p>
+          </div>
         </Container>
       </section>
 
@@ -130,7 +145,8 @@ function Home() {
               Pronto para descer?
             </h3>
             <p className="text-muted-foreground italic max-w-xl mx-auto mb-6">
-              Comece pela porta mais antiga. Leia devagar. Não acenda mais que uma tocha por vez.
+              A magia enfraqueceu. O seu verdadeiro inimigo estava esse tempo todo ao redor, nunca
+              descansando. Leia devagar. Não acenda mais que uma tocha por vez.
             </p>
             <Link
               to="/universo"
