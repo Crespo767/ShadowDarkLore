@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { memo, type ReactNode } from "react";
 
 interface Props {
   image: string;
@@ -9,9 +9,18 @@ interface Props {
   caption?: string;
 }
 
-export function SplitSection({ image, alt, title, reverse, children, caption }: Props) {
+export const SplitSection = memo(function SplitSection({
+  image,
+  alt,
+  title,
+  reverse,
+  children,
+  caption,
+}: Props) {
   return (
-    <section className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center my-20 ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
+    <section
+      className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center my-20 ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}
+    >
       <figure className="relative group">
         <div className="relative overflow-hidden rounded-sm border border-border vignette animate-breathe">
           <img
@@ -44,4 +53,4 @@ export function SplitSection({ image, alt, title, reverse, children, caption }: 
       </div>
     </section>
   );
-}
+});

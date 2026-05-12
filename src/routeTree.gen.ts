@@ -9,61 +9,25 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SobreRouteImport } from './routes/sobre'
-import { Route as RumoresRouteImport } from './routes/rumores'
-import { Route as OficialRouteImport } from './routes/oficial'
-import { Route as MundoAcimaRouteImport } from './routes/mundo-acima'
-import { Route as MundoAbaixoRouteImport } from './routes/mundo-abaixo'
-import { Route as LugaresRouteImport } from './routes/lugares'
-import { Route as GlossarioRouteImport } from './routes/glossario'
-import { Route as FeOrdemCaosRouteImport } from './routes/fe-ordem-caos'
-import { Route as EscuridaoRouteImport } from './routes/escuridao'
+import { Route as UniversoRouteImport } from './routes/universo'
+import { Route as PanteaoRouteImport } from './routes/panteao'
+import { Route as LendasRouteImport } from './routes/lendas'
 import { Route as AventureirosRouteImport } from './routes/aventureiros'
 import { Route as IndexRouteImport } from './routes/index'
 
-const SobreRoute = SobreRouteImport.update({
-  id: '/sobre',
-  path: '/sobre',
+const UniversoRoute = UniversoRouteImport.update({
+  id: '/universo',
+  path: '/universo',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RumoresRoute = RumoresRouteImport.update({
-  id: '/rumores',
-  path: '/rumores',
+const PanteaoRoute = PanteaoRouteImport.update({
+  id: '/panteao',
+  path: '/panteao',
   getParentRoute: () => rootRouteImport,
 } as any)
-const OficialRoute = OficialRouteImport.update({
-  id: '/oficial',
-  path: '/oficial',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MundoAcimaRoute = MundoAcimaRouteImport.update({
-  id: '/mundo-acima',
-  path: '/mundo-acima',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MundoAbaixoRoute = MundoAbaixoRouteImport.update({
-  id: '/mundo-abaixo',
-  path: '/mundo-abaixo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LugaresRoute = LugaresRouteImport.update({
-  id: '/lugares',
-  path: '/lugares',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GlossarioRoute = GlossarioRouteImport.update({
-  id: '/glossario',
-  path: '/glossario',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FeOrdemCaosRoute = FeOrdemCaosRouteImport.update({
-  id: '/fe-ordem-caos',
-  path: '/fe-ordem-caos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EscuridaoRoute = EscuridaoRouteImport.update({
-  id: '/escuridao',
-  path: '/escuridao',
+const LendasRoute = LendasRouteImport.update({
+  id: '/lendas',
+  path: '/lendas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AventureirosRoute = AventureirosRouteImport.update({
@@ -80,162 +44,62 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aventureiros': typeof AventureirosRoute
-  '/escuridao': typeof EscuridaoRoute
-  '/fe-ordem-caos': typeof FeOrdemCaosRoute
-  '/glossario': typeof GlossarioRoute
-  '/lugares': typeof LugaresRoute
-  '/mundo-abaixo': typeof MundoAbaixoRoute
-  '/mundo-acima': typeof MundoAcimaRoute
-  '/oficial': typeof OficialRoute
-  '/rumores': typeof RumoresRoute
-  '/sobre': typeof SobreRoute
+  '/lendas': typeof LendasRoute
+  '/panteao': typeof PanteaoRoute
+  '/universo': typeof UniversoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aventureiros': typeof AventureirosRoute
-  '/escuridao': typeof EscuridaoRoute
-  '/fe-ordem-caos': typeof FeOrdemCaosRoute
-  '/glossario': typeof GlossarioRoute
-  '/lugares': typeof LugaresRoute
-  '/mundo-abaixo': typeof MundoAbaixoRoute
-  '/mundo-acima': typeof MundoAcimaRoute
-  '/oficial': typeof OficialRoute
-  '/rumores': typeof RumoresRoute
-  '/sobre': typeof SobreRoute
+  '/lendas': typeof LendasRoute
+  '/panteao': typeof PanteaoRoute
+  '/universo': typeof UniversoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aventureiros': typeof AventureirosRoute
-  '/escuridao': typeof EscuridaoRoute
-  '/fe-ordem-caos': typeof FeOrdemCaosRoute
-  '/glossario': typeof GlossarioRoute
-  '/lugares': typeof LugaresRoute
-  '/mundo-abaixo': typeof MundoAbaixoRoute
-  '/mundo-acima': typeof MundoAcimaRoute
-  '/oficial': typeof OficialRoute
-  '/rumores': typeof RumoresRoute
-  '/sobre': typeof SobreRoute
+  '/lendas': typeof LendasRoute
+  '/panteao': typeof PanteaoRoute
+  '/universo': typeof UniversoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/aventureiros'
-    | '/escuridao'
-    | '/fe-ordem-caos'
-    | '/glossario'
-    | '/lugares'
-    | '/mundo-abaixo'
-    | '/mundo-acima'
-    | '/oficial'
-    | '/rumores'
-    | '/sobre'
+  fullPaths: '/' | '/aventureiros' | '/lendas' | '/panteao' | '/universo'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/aventureiros'
-    | '/escuridao'
-    | '/fe-ordem-caos'
-    | '/glossario'
-    | '/lugares'
-    | '/mundo-abaixo'
-    | '/mundo-acima'
-    | '/oficial'
-    | '/rumores'
-    | '/sobre'
-  id:
-    | '__root__'
-    | '/'
-    | '/aventureiros'
-    | '/escuridao'
-    | '/fe-ordem-caos'
-    | '/glossario'
-    | '/lugares'
-    | '/mundo-abaixo'
-    | '/mundo-acima'
-    | '/oficial'
-    | '/rumores'
-    | '/sobre'
+  to: '/' | '/aventureiros' | '/lendas' | '/panteao' | '/universo'
+  id: '__root__' | '/' | '/aventureiros' | '/lendas' | '/panteao' | '/universo'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AventureirosRoute: typeof AventureirosRoute
-  EscuridaoRoute: typeof EscuridaoRoute
-  FeOrdemCaosRoute: typeof FeOrdemCaosRoute
-  GlossarioRoute: typeof GlossarioRoute
-  LugaresRoute: typeof LugaresRoute
-  MundoAbaixoRoute: typeof MundoAbaixoRoute
-  MundoAcimaRoute: typeof MundoAcimaRoute
-  OficialRoute: typeof OficialRoute
-  RumoresRoute: typeof RumoresRoute
-  SobreRoute: typeof SobreRoute
+  LendasRoute: typeof LendasRoute
+  PanteaoRoute: typeof PanteaoRoute
+  UniversoRoute: typeof UniversoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sobre': {
-      id: '/sobre'
-      path: '/sobre'
-      fullPath: '/sobre'
-      preLoaderRoute: typeof SobreRouteImport
+    '/universo': {
+      id: '/universo'
+      path: '/universo'
+      fullPath: '/universo'
+      preLoaderRoute: typeof UniversoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/rumores': {
-      id: '/rumores'
-      path: '/rumores'
-      fullPath: '/rumores'
-      preLoaderRoute: typeof RumoresRouteImport
+    '/panteao': {
+      id: '/panteao'
+      path: '/panteao'
+      fullPath: '/panteao'
+      preLoaderRoute: typeof PanteaoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/oficial': {
-      id: '/oficial'
-      path: '/oficial'
-      fullPath: '/oficial'
-      preLoaderRoute: typeof OficialRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mundo-acima': {
-      id: '/mundo-acima'
-      path: '/mundo-acima'
-      fullPath: '/mundo-acima'
-      preLoaderRoute: typeof MundoAcimaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mundo-abaixo': {
-      id: '/mundo-abaixo'
-      path: '/mundo-abaixo'
-      fullPath: '/mundo-abaixo'
-      preLoaderRoute: typeof MundoAbaixoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lugares': {
-      id: '/lugares'
-      path: '/lugares'
-      fullPath: '/lugares'
-      preLoaderRoute: typeof LugaresRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/glossario': {
-      id: '/glossario'
-      path: '/glossario'
-      fullPath: '/glossario'
-      preLoaderRoute: typeof GlossarioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fe-ordem-caos': {
-      id: '/fe-ordem-caos'
-      path: '/fe-ordem-caos'
-      fullPath: '/fe-ordem-caos'
-      preLoaderRoute: typeof FeOrdemCaosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/escuridao': {
-      id: '/escuridao'
-      path: '/escuridao'
-      fullPath: '/escuridao'
-      preLoaderRoute: typeof EscuridaoRouteImport
+    '/lendas': {
+      id: '/lendas'
+      path: '/lendas'
+      fullPath: '/lendas'
+      preLoaderRoute: typeof LendasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/aventureiros': {
@@ -258,15 +122,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AventureirosRoute: AventureirosRoute,
-  EscuridaoRoute: EscuridaoRoute,
-  FeOrdemCaosRoute: FeOrdemCaosRoute,
-  GlossarioRoute: GlossarioRoute,
-  LugaresRoute: LugaresRoute,
-  MundoAbaixoRoute: MundoAbaixoRoute,
-  MundoAcimaRoute: MundoAcimaRoute,
-  OficialRoute: OficialRoute,
-  RumoresRoute: RumoresRoute,
-  SobreRoute: SobreRoute,
+  LendasRoute: LendasRoute,
+  PanteaoRoute: PanteaoRoute,
+  UniversoRoute: UniversoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

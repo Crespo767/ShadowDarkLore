@@ -1,0 +1,111 @@
+{
+  "introducao": {
+    "titulo": "A Escuridão Profunda",
+    "texto": "Nestes corredores obscuros, a ruína e a glória florescem eternamente. Essa é a história de Shadowdark. Eles eram exploradores, e por isso se arriscaram nos corredores perdidos do Shadowdark. A rocha trabalhada deu lugar a paredes úmidas de caverna. Sibilos e gritos distantes ecoavam na escuridão, e abominações com asas de couro avançavam com suas garras em ganchos. Os ferimentos se multiplicaram. As paredes feitas de pedra trabalhada se tornaram mais densas e obscuras. A magia enfraqueceu. Os exploradores se depararam com seu verdadeiro inimigo, que estava esse tempo todo ao redor deles, nunca descansando, nunca dormindo, nunca cessando. Era o ShadowDark."
+  },
+  "oQueE": {
+    "titulo": "O que é Shadowdark?",
+    "texto": "Shadowdark é qualquer lugar onde o perigo e a escuridão predominam. Ele guarda segredos antigos e tesouros empoeirados em suas garras podres, desafiando caçadores de tesouros a enfrentarem os seus destinos. É um mundo de aventura e fantasia em que heróis exploram ruínas soterradas, cidades perdidas, florestas infestadas de aranhas, e até mesmo aterrorizantes covis de dragões, tudo em busca de ouro e glória."
+  },
+  "divindades": {
+    "titulo": "As Divindades",
+    "texto": "Os muitos deuses do universo são personificações da Ordem, do Caos e da Neutralidade. A maioria das pessoas adoram a um dos Quatro Lordes, os deuses ordeiros e neutros que defendem a justiça, a ordem e a misericórdia. Seres maléficos adoram a um dos deuses da Trindade Sombria, que são divindades caóticas que valorizam o poder, a destruição e a crueldade. Antigamente, existiam nove deuses primários, mas dois deles hoje são os Perdidos, proibidos ou esquecidos.",
+    "lista": [
+      {
+        "nome": "Santa Terragnis",
+        "alinhamento": "Ordeira",
+        "descricao": "Uma cavaleira lendária que é a padroeira da maioria dos humanos ordeiros. Ela ascendeu à divindade há muito tempo, e é a personificação da integridade e da justiça."
+      },
+      {
+        "nome": "Gede",
+        "alinhamento": "Neutra",
+        "descricao": "A deusa dos banquetes, da alegria e das regiões selvagens. Gede normalmente é pacífica, mas tempestades primais irrompem quando ela está enraivecida. Muitos elfos e halflings adoram a ela."
+      },
+      {
+        "nome": "Madeera, a Pactuadora",
+        "alinhamento": "Ordeira",
+        "descricao": "Madeera foi a primeira manifestação da Ordem. Ela carrega todas as leis da realidade, um decreto chamado de O Pacto, escritas em sua pele com símbolos detalhados."
+      },
+      {
+        "nome": "Ord",
+        "alinhamento": "Neutro",
+        "descricao": "Ord, o Inflexível, o Sábio, o Guardião dos Segredos. Ele é o deus da magia, conhecimento, segredos e equilíbrio."
+      },
+      {
+        "nome": "Memnon",
+        "alinhamento": "Caótico",
+        "descricao": "Memnon foi a primeira manifestação do Caos. Ele é irmão gêmeo de Madeera, e é uma entidade com feições leoninas e uma juba vermelha. Sua principal ambição é rasgar as leis cósmicas do Pacto que estão inscritas na pele de sua irmã."
+      },
+      {
+        "nome": "Ramlaat",
+        "alinhamento": "Caótico",
+        "descricao": "Ramlaat é o Saqueador, o Bárbaro, a Horda. Muitos orcs adoram a ele e vivem de acordo com o Rito de Sangue, uma profecia que afirma que somente os mais fortes irão sobreviver à perdição que se aproxima."
+      },
+      {
+        "nome": "Shune, a Maléfica",
+        "alinhamento": "Caótica",
+        "descricao": "Shune sussurra segredos arcanos para feiticeiros e bruxas que clamam por ela na escuridão da noite. Ela planeja substituir Ord para assumir o controle do grande fluxo de magia."
+      },
+      {
+        "nome": "Os Perdidos",
+        "alinhamento": "Desconhecido",
+        "descricao": "Dois dos Nove estão perdidos há muitas eras, e seus nomes foram expurgados da história e da memória. Ainda assim, vestígios de suas lendas ainda sobrevivem em textos antigos e locais esquecidos..."
+      }
+    ]
+  },
+  "eraPrimordial": {
+    "titulo": "A Queda da Era Primordial",
+    "texto": "E assim a Era Primordial acabou, e os deuses fugiram. No lugar deles, os mortais se ergueram e se espalharam por toda a terra, com seus reinos brilhantes e ruínas perdidas..."
+  },
+  "ancestralidades": {
+    "titulo": "Os Povos do Mundo",
+    "texto": "As diferentes raças que trilham os caminhos da luz e se aventuram nas sombras do Shadowdark.",
+    "lista": [
+      {
+        "nome": "Anão",
+        "descricao": "Povo corajoso e robusto, tão resiliente quanto os reinos de pedra que eles esculpem dentro das montanhas."
+      },
+      {
+        "nome": "Elfo",
+        "descricao": "Povo etéreo e gracioso, que venera o conhecimento e a beleza. Os elfos enxergam longe e vivem bastante."
+      },
+      {
+        "nome": "Goblin",
+        "descricao": "Criaturas verdes e espertas que prosperam em locais escuros e apertados. Os goblins são tão ferozes quanto pequenos."
+      },
+      {
+        "nome": "Halfling",
+        "descricao": "Pequenos e alegres habitantes do campo, com personalidades travessas. Eles apreciam os prazeres simples da vida."
+      },
+      {
+        "nome": "Humano",
+        "descricao": "Povo corajoso, adaptável e diverso que aprende de forma rápida e que alcança feitos poderosos."
+      },
+      {
+        "nome": "Meio-Orc",
+        "descricao": "Guerreiros imponentes e com presas, que são tão implacáveis quanto os orcs e tão ousados quanto os humanos."
+      }
+    ]
+  },
+  "classes": {
+    "titulo": "Os Heróis e Aventureiros",
+    "lista": [
+      {
+        "nome": "Guerreiro",
+        "descricao": "Gladiadores ensanguentados usando armaduras amassadas, duelistas acrobáticos com suas espadas de arremesso, ou arqueiros élficos de visão aguçada que forjam suas lendas com aço e coragem."
+      },
+      {
+        "nome": "Ladrão",
+        "descricao": "Assassinos que se esgueiram por telhados, vigaristas sorridentes ou escaladores encapuzados que podem arrancar uma pedra preciosa das garras de um demônio adormecido e vendê-la pelo dobro de seu preço."
+      },
+      {
+        "nome": "Mago",
+        "descricao": "Mestres tatuados com runas, sábios usando óculos, e bruxas conjuradoras de chamas que ousam manipular as terríveis forças da magia."
+      },
+      {
+        "nome": "Sacerdote",
+        "descricao": "Templários cruzados, xamãs proféticos, ou fanáticos com olhos enlouquecidos que empunham o poder de seus deuses para expurgar os impuros."
+      }
+    ]
+  }
+}

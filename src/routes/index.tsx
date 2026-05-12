@@ -9,7 +9,11 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "ShadowDark Compendium — A tocha está acesa" },
-      { name: "description", content: "Uma introdução visual e sem spoilers ao clima, aos lugares e às lendas de ShadowDark RPG." },
+      {
+        name: "description",
+        content:
+          "Uma introdução visual e sem spoilers ao clima, aos lugares e às lendas de ShadowDark RPG.",
+      },
       { property: "og:title", content: "ShadowDark Compendium" },
       { property: "og:description", content: "A tocha está acesa. O mundo abaixo está esperando." },
     ],
@@ -31,7 +35,7 @@ function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.05_0.005_50/0.85)_100%)]" />
-        <Embers count={10} />
+        <Embers count={5} />
 
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <p className="font-display uppercase tracking-[0.55em] text-[0.7rem] text-flame mb-6 animate-fade-up">
@@ -43,24 +47,25 @@ function Home() {
             A tocha está acesa.
           </h1>
           <h1 className="font-display text-4xl sm:text-6xl md:text-7xl text-flame text-glow leading-[1.02] mt-2 animate-fade-up delay-300">
-            O mundo abaixo<br className="sm:hidden" /> está esperando.
+            O mundo abaixo
+            <br className="sm:hidden" /> está esperando.
           </h1>
           <div className="divider-ornament my-10 max-w-md mx-auto animate-fade-up delay-500">
             <span>✦</span>
           </div>
           <p className="text-base md:text-lg text-bone/80 italic max-w-2xl mx-auto leading-relaxed animate-fade-up delay-500">
-            Uma introdução visual e sem spoilers ao clima, aos lugares e às lendas de
-            ShadowDark RPG, feita para quem vai entrar na escuridão pela primeira vez.
+            Uma introdução visual e sem spoilers ao clima, aos lugares e às lendas de ShadowDark
+            RPG, feita para quem vai entrar na escuridão pela primeira vez.
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-4 animate-fade-up delay-700">
             <Link
-              to="/sobre"
+              to="/universo"
               className="font-display uppercase tracking-[0.25em] text-xs sm:text-sm bg-flame text-primary-foreground px-8 py-4 hover:bg-flame-glow transition-all duration-500 animate-ember hover:scale-[1.03]"
             >
               Começar a leitura
             </Link>
             <Link
-              to="/sobre"
+              to="/universo"
               className="font-display uppercase tracking-[0.25em] text-xs sm:text-sm border border-flame/60 text-flame px-8 py-4 hover:bg-flame/10 hover:border-flame transition-all duration-500"
             >
               O que é o ShadowDark?
@@ -78,7 +83,8 @@ function Home() {
       <section className="relative py-24">
         <Container className="py-0">
           <p className="pullquote max-w-3xl mx-auto animate-reveal">
-            “Há lugares onde a chama recusa-se a brilhar.<br />
+            “Há lugares onde a chama recusa-se a brilhar.
+            <br />
             Não por estarem úmidos. Por estarem ouvindo.”
           </p>
         </Container>
@@ -94,9 +100,11 @@ function Home() {
             <h2 className="font-display text-3xl md:text-5xl text-ivory text-glow-soft">
               Por onde começar
             </h2>
-            <div className="divider-ornament my-6 max-w-sm mx-auto"><span>✦</span></div>
+            <div className="divider-ornament my-6 max-w-sm mx-auto">
+              <span>✦</span>
+            </div>
             <p className="text-muted-foreground italic max-w-xl mx-auto">
-              Onze portas. Nenhuma trancada. Escolha a que te chama primeiro.
+              Quatro portas. Nenhuma trancada. Escolha a que te chama primeiro.
             </p>
           </div>
 
@@ -104,8 +112,7 @@ function Home() {
             {chapters.map((c) => (
               <Link key={c.to} to={c.to} className="block">
                 <LoreCard title={c.title} icon={c.icon} number={c.num}>
-                  {c.text}{" "}
-                  <span className="text-flame story-link">Entrar →</span>
+                  {c.text} <span className="text-flame story-link">Entrar →</span>
                 </LoreCard>
               </Link>
             ))}
@@ -126,7 +133,7 @@ function Home() {
               Comece pela porta mais antiga. Leia devagar. Não acenda mais que uma tocha por vez.
             </p>
             <Link
-              to="/sobre"
+              to="/universo"
               className="inline-block font-display uppercase tracking-[0.25em] text-xs sm:text-sm bg-flame text-primary-foreground px-7 py-3 hover:bg-flame-glow transition-all"
             >
               Começar pelo Capítulo I
@@ -139,10 +146,32 @@ function Home() {
 }
 
 const chapters = [
-  { to: "/sobre" as const, num: "I", title: "O que é o ShadowDark", icon: <BookOpen className="h-5 w-5" />, text: "Onde a luz falha — e o que se acorda quando ela se apaga." },
-  { to: "/mundo-acima" as const, num: "II", title: "O Mundo Acima", icon: <Map className="h-5 w-5" />, text: "Vilas, tavernas e estradas. A vida que se vive sob o sol." },
-  { to: "/mundo-abaixo" as const, num: "III", title: "O Mundo Abaixo", icon: <Mountain className="h-5 w-5" />, text: "Escadarias antigas e portas grandes demais para mãos humanas." },
-  { to: "/escuridao" as const, num: "IV", title: "A Escuridão", icon: <Flame className="h-5 w-5" />, text: "Não é ausência. É presença. E tem paciência." },
-  { to: "/aventureiros" as const, num: "V", title: "Aventureiros", icon: <Skull className="h-5 w-5" />, text: "Quem entra onde os outros não ousam — e por quê." },
-  { to: "/rumores" as const, num: "VIII", title: "Rumores de Taverna", icon: <ScrollText className="h-5 w-5" />, text: "Coisas que se ouvem entre um copo e outro. Nem sempre verdade." },
+  {
+    to: "/universo" as const,
+    num: "I",
+    title: "O Universo",
+    icon: <BookOpen className="h-5 w-5" />,
+    text: "A Escuridão Profunda e a Queda da Era Primordial.",
+  },
+  {
+    to: "/panteao" as const,
+    num: "II",
+    title: "O Panteão",
+    icon: <Flame className="h-5 w-5" />,
+    text: "As divindades da Ordem, do Caos e da Neutralidade.",
+  },
+  {
+    to: "/aventureiros" as const,
+    num: "III",
+    title: "Aventureiros",
+    icon: <Skull className="h-5 w-5" />,
+    text: "Os povos do mundo e as classes de aventureiros.",
+  },
+  {
+    to: "/lendas" as const,
+    num: "IV",
+    title: "Lendas & Lugares",
+    icon: <ScrollText className="h-5 w-5" />,
+    text: "Rumores, lendas e locais que talvez nem existam.",
+  },
 ];

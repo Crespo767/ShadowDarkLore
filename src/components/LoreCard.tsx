@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { memo, type ReactNode } from "react";
 
 interface Props {
   title: string;
@@ -7,7 +7,7 @@ interface Props {
   number?: string;
 }
 
-export function LoreCard({ title, children, icon, number }: Props) {
+export const LoreCard = memo(function LoreCard({ title, children, icon, number }: Props) {
   return (
     <article className="parchment card-ember corner-ornaments p-7 rounded-sm group">
       <div className="flex items-start justify-between mb-4">
@@ -33,4 +33,4 @@ export function LoreCard({ title, children, icon, number }: Props) {
       </div>
     </article>
   );
-}
+});

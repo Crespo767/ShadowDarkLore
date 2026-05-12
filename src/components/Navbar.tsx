@@ -4,16 +4,10 @@ import { Menu, X, Flame } from "lucide-react";
 
 const links = [
   { to: "/", label: "Início" },
-  { to: "/sobre", label: "O ShadowDark" },
-  { to: "/mundo-acima", label: "Mundo Acima" },
-  { to: "/mundo-abaixo", label: "Mundo Abaixo" },
-  { to: "/escuridao", label: "A Escuridão" },
+  { to: "/universo", label: "O Universo" },
   { to: "/aventureiros", label: "Aventureiros" },
-  { to: "/fe-ordem-caos", label: "Fé & Caos" },
-  { to: "/lugares", label: "Lugares" },
-  { to: "/rumores", label: "Rumores" },
-  { to: "/glossario", label: "Glossário" },
-  { to: "/oficial", label: "Oficial" },
+  { to: "/panteao", label: "O Panteão" },
+  { to: "/lendas", label: "Lendas & Lugares" },
 ] as const;
 
 export function Navbar() {
@@ -29,14 +23,17 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-4">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
-              className="px-3 py-2 text-xs uppercase tracking-wider text-muted-foreground hover:text-flame transition-colors font-display"
-              activeProps={{ className: "px-3 py-2 text-xs uppercase tracking-wider text-flame font-display" }}
+              className="px-3 py-2 text-sm uppercase tracking-[0.15em] text-muted-foreground hover:text-flame transition-colors font-display"
+              activeProps={{
+                className:
+                  "px-3 py-2 text-sm uppercase tracking-[0.15em] text-flame font-display font-semibold text-glow",
+              }}
             >
               {l.label}
             </Link>
@@ -61,8 +58,11 @@ export function Navbar() {
                 to={l.to}
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: l.to === "/" }}
-                className="py-2 text-sm uppercase tracking-wider text-muted-foreground hover:text-flame font-display"
-                activeProps={{ className: "py-2 text-sm uppercase tracking-wider text-flame font-display" }}
+                className="py-3 px-4 text-sm uppercase tracking-[0.15em] text-muted-foreground hover:text-flame hover:bg-white/5 font-display transition-colors"
+                activeProps={{
+                  className:
+                    "py-3 px-4 text-sm uppercase tracking-[0.15em] text-flame bg-white/5 font-display font-semibold text-glow",
+                }}
               >
                 {l.label}
               </Link>

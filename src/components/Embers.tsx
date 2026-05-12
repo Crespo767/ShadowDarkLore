@@ -1,4 +1,6 @@
-export function Embers({ count = 8 }: { count?: number }) {
+import { memo } from "react";
+
+export const Embers = memo(function Embers({ count = 8 }: { count?: number }) {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
       {Array.from({ length: count }).map((_, i) => {
@@ -20,4 +22,4 @@ export function Embers({ count = 8 }: { count?: number }) {
       })}
     </div>
   );
-}
+});
